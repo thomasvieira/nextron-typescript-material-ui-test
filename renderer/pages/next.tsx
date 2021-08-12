@@ -1,14 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import { Theme, makeStyles, createStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Link from '../components/Link';
+import React from "react";
+import Head from "next/head";
+import { Theme, makeStyles, createStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import Link from "../components/Link";
+import Sidebar from "../components/Sidebar";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      textAlign: 'center',
+      textAlign: "center",
       paddingTop: theme.spacing(4),
     },
   })
@@ -23,6 +24,7 @@ function Next() {
         <title>Next - Nextron (with-typescript-material-ui)</title>
       </Head>
       <div className={classes.root}>
+        <Sidebar />
         <Typography variant="h4" gutterBottom>
           Material-UI
         </Typography>
@@ -38,6 +40,6 @@ function Next() {
       </div>
     </React.Fragment>
   );
-};
+}
 
 export default Next;

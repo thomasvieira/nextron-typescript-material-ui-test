@@ -1,19 +1,20 @@
-import React from 'react';
-import Head from 'next/head';
-import { Theme, makeStyles, createStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogActions from '@material-ui/core/DialogActions';
-import Typography from '@material-ui/core/Typography';
-import Link from '../components/Link';
+import React from "react";
+import Head from "next/head";
+import { Theme, makeStyles, createStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogActions from "@material-ui/core/DialogActions";
+import Typography from "@material-ui/core/Typography";
+import Link from "../components/Link";
+import Sidebar from "../components/Sidebar";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      textAlign: 'center',
+      textAlign: "center",
       paddingTop: theme.spacing(4),
     },
   })
@@ -31,6 +32,7 @@ function Home() {
         <title>Home - Nextron (with-typescript-material-ui)</title>
       </Head>
       <div className={classes.root}>
+        <Sidebar />
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle>Super Secret Password</DialogTitle>
           <DialogContent>
@@ -58,6 +60,6 @@ function Home() {
       </div>
     </React.Fragment>
   );
-};
+}
 
 export default Home;
